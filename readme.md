@@ -5,7 +5,7 @@ This will be an example sweep in controlling robot arms with an AJAX form.
 
 The serial class is a modified version of the PHP Serial class by Xowap (https://github.com/Xowap/PHP-Serial).
 
-Kyle Granat from Trossen Robotics (https://github.com/kgranat) wrote the original arm.php code.  Updates to arm.php and form-text-boxes/ made by Maureen Davey (http://www.maureenldavey.com).
+Kyle Granat from Trossen Robotics (https://github.com/kgranat) wrote the original arm.php code.  All other files besides arm.php and php_serial.class.php were written by Maureen Davey (http://www.maureenldavey.com).
 
 
 File Structure
