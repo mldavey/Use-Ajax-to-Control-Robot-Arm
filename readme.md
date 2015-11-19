@@ -22,5 +22,6 @@ File Structure
 
 To Dos
 ====
-* Add limits to the text boxes in the form-text-boxes version.
-* Adjust sliders version to read inputs from a separate XML file.
+* Add limits to the text boxes in the form-text-boxes version
+* Adjust form-text-boxes version to read default parameters from a separate XML file.
+* Adjust sliders version to read default parameters from a separate XML file.
