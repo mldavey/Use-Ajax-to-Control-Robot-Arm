@@ -71,10 +71,10 @@ $serial->deviceOpen();					//open port.
 // Interbotix
 // http://learn.trossenrobotics.com/arbotix/arbotix-communication-controllers/31-arm-link-reference.html
 
-$x = $_GET['x_axis'];			//arm x coordinate, offset value, so 512 is '0'
+$x = $_GET['x_axis'] + 512;			//arm x coordinate, offset value, so 512 is '0'
 $y = $_GET['y_axis'];			//arm y coordinate, native value
 $z = $_GET['z_axis'];			//arm z coordinate, native value
-$wristAngle = $_GET['wrist_angle'];	//arm wrist angle . offset value so 90 is '0' or straight wrist
+$wristAngle = $_GET['wrist_angle'] + 90;	//arm wrist angle offset value, so 90 is '0' or straight wrist
 $gripper = $_GET['gripper'];		//gripper control, 0 = close, 512 = open
 $delta = $_GET['delta'];		//speed control, smaller value = faster speed
 $button = 0;		//button byte for sending data
@@ -85,12 +85,19 @@ $changed = $_GET['changed'];
 $changed = str_replace('_', ' ', $changed);
 $changed_value = $_GET['changed_value'];
 
+if($changed === 'undefined') {
+	//When the page first loads, all values are set to their defaults
+	$arm_message = "All parameters have been set to their default values, and the arm should have finished moving if it was not previously set to these same parameters. Ready to receive next command.";
+} else {
+	$arm_message = "The $changed value was updated to $changed_value, and the arm should have finished moving.  Ready to receive next command.";
+}
+
 sendSnapperArmLinkPacket($serial, $x, $y, $z, $wristAngle, $gripper, $delta);
 sleep(2);
 
 $serial->deviceClose(); //close the serial port for the next page
 
-echo "The $changed value was updated to $changed_value, and the arm should have finished moving.  Ready to receive next command.";
+echo $arm_message;
 
 
 //This function accepts the high level coordinates and then turns them into the appropriate high/low byte values.

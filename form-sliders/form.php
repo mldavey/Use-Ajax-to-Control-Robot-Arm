@@ -74,7 +74,7 @@
 				<div class="form-group padding-bottom">
 					<label for="armResponse">Arm Response:</label>
 					<br />
-					<textarea class="form-control" rows="4" name="armResponse" readonly>Please wait for page to load...</textarea>
+					<textarea class="form-control" rows="4" name="armResponse" readonly>Page is loading, please wait for this message to update before altering values...</textarea>
 				</div>
 			</form>
 		</div>

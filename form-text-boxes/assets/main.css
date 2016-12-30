@@ -1,0 +1,15 @@
+/* Additional Styles For Form */
+
+.add-margins {
+   margin: 1rem;
+}
+.padding-bottom {
+  padding-bottom: 1rem;
+}
+.small-text {
+  font-size: 0.8em;
+}
+.current-value {
+  font-weight: bold;
+  color: #FF9900;
+}
