@@ -22,6 +22,6 @@ File Structure
 
 To Dos
 ====
-* Add limits to the text boxes in the form-text-boxes version
-* Adjust form-text-boxes version to read default parameters from a separate XML file.
-* Adjust sliders version to read default parameters from a separate XML file.
+* Adjust both form-text-boxes version and sliders version to read default parameters from a separate XML file instead of hardcoding via PHP.
+* Look at simplifying the code for handling the limits in form-text-boxes, potentially options where the limits and field names don't have to be hardcoded into the results file.
+* Explore other possibilities for transmitting the values to the arm beyond AJAX.
